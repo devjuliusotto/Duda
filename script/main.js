@@ -4,36 +4,6 @@
 // *** Este bloco foi excluído/omitido ***
 
 
-document.getElementById("start-btn").addEventListener("click", function() {
-  document.getElementById("start-screen").style.display = "none";
-  document.getElementById("message-container").style.display = "block";
-
-  // Inicia a exibição das mensagens
-  startMessages();
-});
-
-function startMessages() {
-  let messages = document.querySelectorAll(".message");
-  let index = 0;
-
-  function showNextMessage() {
-      if (index > 0) {
-          messages[index - 1].style.opacity = "0";
-          messages[index - 1].style.visibility = "hidden";
-      }
-
-      if (index < messages.length) {
-          messages[index].style.opacity = "1";
-          messages[index].style.visibility = "visible";
-          setTimeout(showNextMessage, 2000); // Tempo entre as mensagens
-          index++;
-      }
-  }
-
-  showNextMessage();
-}
-
-
 
 /*******************************************************
  * 2) FUNÇÃO DE CONFETES
